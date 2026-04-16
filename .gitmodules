@@ -1,0 +1,3 @@
+[submodule "libs/MathEngine"]
+	path = libs/MathEngine
+	url = https://github.com/JakubKata/MathEngine.git
