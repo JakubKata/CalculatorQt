@@ -1,8 +1,6 @@
 cmake_minimum_required(VERSION 3.19)
 project(CalculatorQt LANGUAGES CXX)
 
-set(CMAKE_PREFIX_PATH "C:/Qt/6.11.0/msvc2022_64")
-
 find_package(Qt6 6.5 REQUIRED COMPONENTS Core Widgets)
 
 qt_standard_project_setup()
