@@ -38,6 +38,8 @@ MainWindow::MainWindow(QWidget *parent)
     connect(ui->pushButton_back, &QPushButton::clicked, this, &MainWindow::backspaceInput);
     connect(ui->pushButton_right, &QPushButton::clicked, this, [this]() { moveCursor("right"); });
     connect(ui->pushButton_left, &QPushButton::clicked, this, [this]() { moveCursor("left"); });
+    
+    ui->input->setFocus();
 }
 
 MainWindow::~MainWindow()
