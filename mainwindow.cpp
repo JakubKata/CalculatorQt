@@ -46,8 +46,8 @@ MainWindow::~MainWindow()
 
 void MainWindow::appendToInput(const QString& text)
 {
-    QString currentText = ui->input->text();
-    ui->input->setText(currentText + text);
+    ui->input->insert(text);
+    ui->input->setFocus();
 }
 
 void MainWindow::clearInput()
@@ -58,9 +58,8 @@ void MainWindow::clearInput()
 
 void MainWindow::backspaceInput()
 {
-    QString currentText = ui->input->text();
-    currentText.chop(1);
-    ui->input->setText(currentText);
+    ui->input->backspace();
+    ui->input->setFocus();
 }
 
 void MainWindow::moveCursor(const QString& direction)
@@ -71,6 +70,7 @@ void MainWindow::moveCursor(const QString& direction)
     } else if (direction == "right" && cursorPosition < ui->input->text().length()) {
         ui->input->setCursorPosition(cursorPosition + 1);
     }
+    ui->input->setFocus();
 }
 
 void MainWindow::calculateResult()
