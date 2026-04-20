@@ -33,6 +33,7 @@ MainWindow::MainWindow(QWidget *parent)
     connect(ui->pushButton_tan, &QPushButton::clicked, this, [this]() { appendToInput("tan("); });
     
     connect(ui->pushButton_equals, &QPushButton::clicked, this, &MainWindow::calculateResult);
+    connect(ui->input, &QLineEdit::returnPressed, this, &MainWindow::calculateResult);
     connect(ui->pushButton_clear, &QPushButton::clicked, this, &MainWindow::clearInput);
     connect(ui->pushButton_back, &QPushButton::clicked, this, &MainWindow::backspaceInput);
     connect(ui->pushButton_right, &QPushButton::clicked, this, [this]() { moveCursor("right"); });
