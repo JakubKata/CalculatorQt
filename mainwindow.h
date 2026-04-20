@@ -19,5 +19,14 @@ public:
 
 private:
     Ui::MainWindow *ui;
+
+private slots:
+    
+    void appendToInput(const QString& text); 
+    
+    void calculateResult();
+    void clearInput();
+    void backspaceInput();
+    void moveCursor(const QString& direction);
 };
 #endif // MAINWINDOW_H
