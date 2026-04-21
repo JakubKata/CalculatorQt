@@ -111,6 +111,8 @@ Example command:
 C:\Qt\6.11.0\msvc2022_64\bin\windeployqt.exe C:\Users\YourUser\Desktop\Calculator\CalculatorQt.exe
 ```
 
+Replace both paths above with paths from your machine (Qt installation path and your target folder).
+
 `windeployqt` will add required Qt runtime files (DLLs, platform plugins, image format plugins, and related folders) next to the executable.
 
 Note: this project already contains Qt CMake deploy/install integration (`qt_generate_deploy_app_script`), so manual `windeployqt` is mainly useful for quick local packaging.
@@ -145,6 +147,8 @@ On Windows multi-config generators (for example Visual Studio), use:
 ```powershell
 cmake --install build --config Release
 ```
+
+Use the same configuration in `cmake --install` that you built earlier (for example `Debug` with `Debug`, `Release` with `Release`).
 
 If Windows installation fails because of permissions in `Program Files`, install to a local absolute path:
 
