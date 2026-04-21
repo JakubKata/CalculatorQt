@@ -48,6 +48,14 @@ Note: `MathEngine` tests are not built from the top-level project by default.
 cmake -S . -B build
 ```
 
+If you are using a clean VS Code setup and CMake cannot find Qt, configure with an explicit Qt path:
+
+```powershell
+cmake -S . -B build -DCMAKE_PREFIX_PATH="C:/Qt/6.11.0/msvc2022_64"
+```
+
+Replace the Qt path with your local installation path.
+
 ### Compile
 
 Windows:
