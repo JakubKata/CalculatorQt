@@ -62,6 +62,8 @@ Linux/macOS:
 cmake --build build
 ```
 
+Note: the command above is for single-config generators (typical on Linux/macOS). On Windows with Visual Studio, use `--config Debug` or `--config Release`.
+
 Alternative (if you are already in the `build` directory):
 
 ```bash
@@ -132,7 +134,7 @@ Linux:
   - use tools such as `linuxdeployqt`/AppImage,
   - install and run with required Qt runtime available on target system.
 
-For CMake-based installation on Linux/macOS you can also use:
+For CMake-based installation you can also use:
 
 ```bash
 cmake --install build
@@ -142,6 +144,12 @@ On Windows multi-config generators (for example Visual Studio), use:
 
 ```powershell
 cmake --install build --config Release
+```
+
+If Windows installation fails because of permissions in `Program Files`, install to a local absolute path:
+
+```powershell
+cmake --install build --config Debug --prefix "C:/Users/USER/source/repos/CalculatorQt/dist"
 ```
 
 ---
